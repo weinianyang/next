@@ -573,11 +573,14 @@ class Nav extends React.Component {
                 navChildren.push(<div {...extraProps}>{extra}</div>);
             }
         }
+        if (tabPosition === 'left' || tabPosition === 'right') {
+            this.nav.parentElement.style.overflowY = 'auto';
+        }
 
         const navbarCls = classnames(`${prefix}tabs-bar`, className);
 
         return (
-            <div className={navbarCls} style={style} ref={this.navbarRefHandler}>
+            <div className={navbarCls} id="testscroll" style={style} ref={this.navbarRefHandler}>
                 {navChildren}
             </div>
         );
