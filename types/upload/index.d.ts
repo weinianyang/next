@@ -16,6 +16,11 @@ export interface CardProps extends HTMLAttributesWeak, CommonProps {
      * 上传的地址
      */
     action?: string;
+    
+    /**
+     * 展示下载按钮
+     */
+     showDownload?: boolean;
 
     /**
      * 是否支持多选文件，`ie10+` 支持。开启后按住 ctrl 可选择多个文件
